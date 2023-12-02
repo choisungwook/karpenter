@@ -10,22 +10,6 @@ metadata:
 
 iam:
   withOIDC: true
-  serviceAccounts:
-  - metadata:
-      name: karpenter
-      namespace: "karpenter"
-    roleName: ${CLUSTER_NAME}-karpenter
-    attachPolicyARNs:
-    - arn:aws:iam::${AWS_ACCOUNT_ID}:policy/KarpenterControllerPolicy-${CLUSTER_NAME}
-    roleOnly: true
-
-# aws-auth configmap
-iamIdentityMappings:
-- arn: "arn:aws:iam::${AWS_ACCOUNT_ID}:role/KarpenterNodeRole-${CLUSTER_NAME}"
-  username: system:node:{{EC2PrivateDNSName}}
-  groups:
-  - system:bootstrappers
-  - system:nodes
 
 managedNodeGroups:
 - instanceType: t3.medium
