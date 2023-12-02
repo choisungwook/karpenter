@@ -1,1 +1,2 @@
-eks-deploy.yaml
+eks-config.yaml
+policy.json
