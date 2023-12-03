@@ -1,10 +1,5 @@
 # 개요
-* 카펜터 시나리오2 - provisioner 관계도를 시각화
-
-# 선행지식
-* argocd
-
-# argocd 설치
+* 카펜터 예제1 - hello world
 
 # 실행방법
 * 환경변수 설정
