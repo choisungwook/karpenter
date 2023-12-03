@@ -37,7 +37,7 @@ metadata:
 spec:
   amiFamily: AL2
   # Managed-nodegroup에 설정된 EC2 인스턴스 IAM role을 확인
-  role: "eksctl-karpenter-practice-nodegrou-NodeInstanceRole-ljszW6K09n4N"
+  role: "${NODE_ROLE}"
 
   subnetSelectorTerms:
   - tags:
