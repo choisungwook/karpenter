@@ -97,3 +97,4 @@ eksctl delete cluster --name ${CLUSTER_NAME}
 # 참고자료
 * karpetner getting start: https://karpenter.sh/docs/getting-started/getting-started-with-karpenter/
 * 여기어때 기술블로그: https://techblog.gccompany.co.kr/karpenter-7170ae9fb677
+* karpenter IAM policy: https://raw.githubusercontent.com/aws/karpenter/v0.32.3/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml
