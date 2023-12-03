@@ -17,6 +17,7 @@
             "ec2:CreateLaunchTemplate",
             "ec2:CreateFleet",
             "ec2:DescribeSpotPriceHistory",
+            "ec2:TerminateInstances",
             "pricing:GetProducts",
             "iam:GetInstanceProfile",
             "iam:CreateInstanceProfile",
@@ -29,17 +30,6 @@
         "Effect": "Allow",
         "Resource": "*",
         "Sid": "Karpenter"
-      },
-      {
-        "Action": "ec2:TerminateInstances",
-        "Condition": {
-            "StringLike": {
-                "ec2:ResourceTag/karpenter.sh/provisioner-name": "*"
-            }
-        },
-        "Effect": "Allow",
-        "Resource": "*",
-        "Sid": "ConditionalEC2Termination"
       },
       {
         "Effect": "Allow",
