@@ -6,7 +6,7 @@
 # EKS 생성
 
 1. (선택1) [eksctl로 eks 설치](./eksctl/)
-2. (선택2) [terraform eks 설치]((https://github.com/choisungwook/terraform_practice/tree/main/eks)
+2. (선택2) [terraform eks 설치](https://github.com/choisungwook/terraform_practice/tree/main/eks)
 
 <br>
 
