@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example2-inflate
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: example2-inflate
+  template:
+    metadata:
+      labels:
+        app: example2-inflate
+    spec:
+      # 주석을 풀어서 실행해보세요
+      # affinity:
+      #   nodeAffinity:
+      #     requiredDuringSchedulingIgnoredDuringExecution:
+      #       nodeSelectorTerms:
+      #       - matchExpressions:
+      #         - key: custom-label
+      #           operator: In
+      #           values:
+      #           - hello
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: inflate
+        image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
+        resources:
+          requests:
+            cpu: "1"
