@@ -22,6 +22,8 @@ spec:
       #           operator: In
       #           values:
       #           - hello
+      # nodeSelector:
+      #   custom-label: hello
       terminationGracePeriodSeconds: 0
       containers:
       - name: inflate
