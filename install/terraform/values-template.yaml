@@ -1,0 +1,7 @@
+settings:
+  clusterName: ${CLUSTER_NAME}
+
+serviceAccount:
+  name: karpenter-irsa-sa
+  annotations:
+    eks.amazonaws.com/role-arn: ${ROLE_ARN}
