@@ -1,3 +1,6 @@
+# only use troubleshooting
+# logLevel: debug
+
 settings:
   clusterName: ${CLUSTER_NAME}
 
