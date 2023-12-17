@@ -24,6 +24,7 @@
 2. (선택2) [eks를 테라폼으로 설치한 경우](./terraform/)
 
 # 참고자료
-* karpetner getting start: https://karpenter.sh/docs/getting-started/getting-started-with-karpenter/
+* karpenter getting start: https://karpenter.sh/docs/getting-started/getting-started-with-karpenter/
+* karpenter troubleshooting: https://karpenter.sh/docs/troubleshooting/
 * 여기어때 기술블로그: https://techblog.gccompany.co.kr/karpenter-7170ae9fb677
 * karpenter IAM policy: https://raw.githubusercontent.com/aws/karpenter/v0.32.3/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml
