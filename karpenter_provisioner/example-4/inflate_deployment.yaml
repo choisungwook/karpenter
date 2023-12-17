@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: example4-inflate
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: example4-inflate
@@ -12,18 +12,6 @@ spec:
       labels:
         app: example4-inflate
     spec:
-      # 주석을 풀어서 실행해보세요
-      # affinity:
-      #   nodeAffinity:
-      #     requiredDuringSchedulingIgnoredDuringExecution:
-      #       nodeSelectorTerms:
-      #       - matchExpressions:
-      #         - key: custom-label
-      #           operator: In
-      #           values:
-      #           - hello
-      # nodeSelector:
-      #   custom-label: hello
       terminationGracePeriodSeconds: 0
       containers:
       - name: inflate
