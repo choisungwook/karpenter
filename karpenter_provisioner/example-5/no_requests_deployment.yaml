@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example5-1-inflate
+spec:
+  replicas: 100
+  selector:
+    matchLabels:
+      app: example5-1-inflate
+  template:
+    metadata:
+      labels:
+        app: example5-1-inflate
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: inflate
+        image: public.ecr.aws/eks-distro/kubernetes/pause:3.7

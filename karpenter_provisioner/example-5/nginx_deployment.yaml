@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example5-2-nginx
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: example5-2-nginx
+  template:
+    metadata:
+      labels:
+        app: example5-2-nginx
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: inflate
+        image: nginx
+        resources:
+          requests:
+            cpu: 1
