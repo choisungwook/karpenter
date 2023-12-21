@@ -4,5 +4,5 @@
 # 실행방법
 
 ```bash
-kubectl apply -f ./
+kubectl apply -f {예제파일이름.yaml}
 ```

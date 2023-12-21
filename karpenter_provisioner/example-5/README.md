@@ -9,5 +9,5 @@
 # 예제 실행 방법
 
 ```bash
-kubectl apply -f provisioner.yaml
+kubectl apply -f {예제파일이름.yaml}
 ```
