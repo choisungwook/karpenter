@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example6-inflate
+  name: example7-inflate
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: example6-inflate
+      app: example7-inflate
   template:
     metadata:
       labels:
-        app: example6-inflate
+        app: example7-inflate
     spec:
       terminationGracePeriodSeconds: 0
       containers:
