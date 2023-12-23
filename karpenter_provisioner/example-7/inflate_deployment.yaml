@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example6-inflate
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: example6-inflate
+  template:
+    metadata:
+      labels:
+        app: example6-inflate
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: inflate
+        image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
+        resources:
+          requests:
+            cpu: 1
