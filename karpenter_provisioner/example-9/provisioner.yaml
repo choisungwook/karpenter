@@ -1,0 +1,42 @@
+apiVersion: karpenter.sh/v1beta1
+kind: NodePool
+metadata:
+  name: example9
+spec:
+  template:
+    spec:
+      requirements:
+      - key: "karpenter.sh/capacity-type"
+        operator: In
+        values: ["on-demand"]
+      # node가 생성 된 후 t3.medium을 주석하고 t3.large를 주석해제하세요. 그리고 kubectl apply -f provisioner.yaml을 실행하세요.
+      # - key: node.kubernetes.io/instance-type
+      #   operator: In
+      #   values:
+      #   - t3.medium
+      - key: node.kubernetes.io/instance-type
+        operator: In
+        values:
+        - t3.large
+      nodeClassRef:
+        apiVersion: karpenter.k8s.aws/v1beta1
+        kind: EC2NodeClass
+        name: example9
+---
+apiVersion: karpenter.k8s.aws/v1beta1
+kind: EC2NodeClass
+metadata:
+  name: example9
+spec:
+  amiFamily: AL2
+  # Managed-nodegroup에 설정된 EC2 인스턴스 IAM role을 확인
+  role: "eks-from-terraform-eks-worker-node-role"
+
+  subnetSelectorTerms:
+  - tags:
+      karpenter.sh/discovery: "eks-from-terraform"
+
+  securityGroupSelectorTerms:
+  - tags:
+      aws:eks:cluster-name: "eks-from-terraform"
+      kubernetes.io/cluster/eks-from-terraform: "owned"
