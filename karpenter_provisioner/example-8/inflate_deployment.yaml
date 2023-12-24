@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example8-inflate
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: example8-inflate
+  template:
+    metadata:
+      labels:
+        app: example8-inflate
+    spec:
+      terminationGracePeriodSeconds: 0
+      topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: capacity-spread
+        whenUnsatisfiable: DoNotSchedule
+        labelSelector:
+          matchLabels:
+            app: example8-inflate
+      containers:
+      - name: inflate
+        image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
+        resources:
+          requests:
+            cpu: "1"
+            memory: "1Gi"
