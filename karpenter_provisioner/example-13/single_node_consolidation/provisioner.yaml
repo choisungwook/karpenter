@@ -18,7 +18,6 @@ spec:
         name: example13-single-node
   disruption:
     consolidationPolicy: WhenUnderutilized
-    expireAfter: 1m
 ---
 apiVersion: karpenter.k8s.aws/v1beta1
 kind: EC2NodeClass
