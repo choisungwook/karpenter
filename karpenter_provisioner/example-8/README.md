@@ -3,6 +3,8 @@
 
 # 예제 실행 방법
 
+* deployment배포 및 scale out
+
 ```bash
 kubectl apply -f ./
 
@@ -14,6 +16,12 @@ kubectl scale deploy/example8-inflate --replicas 4
 kubectl scale deploy/example8-inflate --replicas 5
 kubectl scale deploy/example8-inflate --replicas 6
 kubectl scale deploy/example8-inflate --replicas 7
+```
+
+* 노드 조회
+
+```bash
+kubectl get nodes -L karpenter.sh/capacity-type -L capacity-spread  -L karpenter.sh/capacity-type
 ```
 
 # 참고자료
