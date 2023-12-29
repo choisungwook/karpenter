@@ -37,12 +37,13 @@ metadata:
 spec:
   amiFamily: AL2
   # Managed-nodegroup에 설정된 EC2 인스턴스 IAM role을 확인
-  role: "${NODE_ROLE}"
+  role: "eks-from-terraform-eks-worker-node-role"
 
   subnetSelectorTerms:
   - tags:
-      karpenter.sh/discovery: "${CLUSTER_NAME}"
+      karpenter.sh/discovery: "eks-from-terraform"
 
   securityGroupSelectorTerms:
   - tags:
-      karpenter.sh/discovery: "${CLUSTER_NAME}"
+      aws:eks:cluster-name: "eks-from-terraform"
+      kubernetes.io/cluster/eks-from-terraform: "owned"
