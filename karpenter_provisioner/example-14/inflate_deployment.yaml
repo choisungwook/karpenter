@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example14-inflate
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: example14-inflate
+  template:
+    metadata:
+      labels:
+        app: example14-inflate
+    spec:
+      terminationGracePeriodSeconds: 0
+      nodeSelector:
+        hello: world
+      tolerations:
+      - key: hello
+        value: "world"
+        effect: "NoSchedule"
+      containers:
+      - name: inflate
+        image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
+        resources:
+          requests:
+            cpu: "1"
