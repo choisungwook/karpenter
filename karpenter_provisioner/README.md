@@ -16,3 +16,4 @@
 * [disruption expireAfter 설정](./example-12/)
 * [disruption consolidation 설정](./example-13/)
 * [taint & toleration 예제](./example-14/)
+* [karpenter가 생성하는 노드 개수 제한](./example-15/)
