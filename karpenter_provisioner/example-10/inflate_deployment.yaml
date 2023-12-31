@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: example10-inflate
 spec:
-  replicas: 6
+  replicas: 4
   selector:
     matchLabels:
       app: example10-inflate
@@ -12,7 +12,7 @@ spec:
       labels:
         app: example10-inflate
     spec:
-      terminationGracePeriodSeconds: 0
+      terminationGracePeriodSeconds: 10
       containers:
       - name: inflate
         image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
