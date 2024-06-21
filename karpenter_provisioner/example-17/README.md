@@ -14,6 +14,7 @@ kubectl apply -f ./nodepools/teamA
 
 ```sh
 $ kubectl apply -f ./workloads/teamA-typeA
+$ kubectl apply -f ./workloads/teamA-typeB
 $ kubectl get pod
 NAME                                               READY   STATUS    RESTARTS   AGE
 example-17-teama-typea-ondemand-65d4569598-htvvw   1/1     Running   0          70m
