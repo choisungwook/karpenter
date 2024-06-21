@@ -1,8 +1,9 @@
 # 개요
-* capacity-spread설정을 할 때, spot pod가 없고 on-demand pod만 배포하면 두 번째 karpetner node 생성에서 에러 발생
+* capacity-spread 설정 후, spot 또는 on-demand만 사용하도록 설정하면 두 번째 karpetner node 생성단계에서 에러 발생
 * karpenter 버전 0.37.0
 
 # 오류 재현 방법
+* on-demand만 사용하도록 설정하여 오류 재현
 
 1. karpenter nodepool 배포
 
