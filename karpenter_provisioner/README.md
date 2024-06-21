@@ -17,4 +17,5 @@
 * [disruption consolidation 설정](./example-13/)
 * [taint & toleration 예제](./example-14/)
 * [karpenter가 생성하는 노드 개수 제한](./example-15/)
+* [capacity-spread를 사용하여 on-demand:spot 인스턴스 비율 설정](./example-16/)
 * [capacity-spread 잘못된 설정](./example-17/)
