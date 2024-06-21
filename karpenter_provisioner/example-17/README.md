@@ -18,10 +18,6 @@ $ kubectl get pod
 NAME                                               READY   STATUS    RESTARTS   AGE
 example-17-teama-typea-ondemand-65d4569598-htvvw   1/1     Running   0          70m
 example-17-teama-typea-ondemand-65d4569598-j7dnz   1/1     Running   0          70m
-example-17-teama-typeb-6c9589db55-4stqg            1/1     Running   0          63m
-example-17-teama-typeb-6c9589db55-hdnbx            1/1     Running   0          64m
-example-17-teama-typeb-6c9589db55-v5sw2            1/1     Running   0          65m
-example-17-teama-typeb-6c9589db55-zrlrx            1/1     Running   0          64m
 ```
 
 3. on-demand deployment 컨테이너 이미지 태그를 수정해서 배포
@@ -38,10 +34,6 @@ NAME                                               READY   STATUS    RESTARTS   
 example-17-teama-typea-ondemand-65d4569598-htvvw   1/1     Running   0          70m
 example-17-teama-typea-ondemand-65d4569598-j7dnz   1/1     Running   0          70m
 example-17-teama-typea-ondemand-698f878c8d-7p75m   0/1     Pending   0          13m
-example-17-teama-typeb-6c9589db55-4stqg            1/1     Running   0          63m
-example-17-teama-typeb-6c9589db55-hdnbx            1/1     Running   0          64m
-example-17-teama-typeb-6c9589db55-v5sw2            1/1     Running   0          65m
-example-17-teama-typeb-6c9589db55-zrlrx            1/1     Running   0          64m
 ```
 
 ```sh
