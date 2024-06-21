@@ -1,5 +1,5 @@
 # 개요
-* capacity-spread설정을 할 때, on-demand를 label selector을 하면 두 번째 배포부터 에러 발생
+* capacity-spread설정을 할 때, spot pod가 없고 on-demand pod만 배포하면 두 번째 배포부터 에러 발생
 * karpenter 버전 0.37.0
 
 # 오류 재현 방법
