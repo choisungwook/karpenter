@@ -13,7 +13,7 @@
 
 ```bash
 export ROLE_ARN=$(aws iam list-roles --query 'Roles[?RoleName==`eks-from-terraform-karpenter-irsa`].Arn' --output text)
-export KARPENTER_VERSION=v0.33.0
+export KARPENTER_VERSION="0.37.0"
 export CLUSTER_NAME="eks-from-terraform"
 ```
 

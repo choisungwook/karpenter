@@ -7,7 +7,7 @@
 export AWS_ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
 export CLUSTER_NAME="karpenter-practice"
 export K8S_VERSION=1.28
-export KARPENTER_VERSION=v0.32.3
+export KARPENTER_VERSION="0.37.0"
 ```
 
 # eks 생성 방법
