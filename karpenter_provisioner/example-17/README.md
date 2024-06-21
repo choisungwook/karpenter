@@ -1,5 +1,5 @@
 # 개요
-* capacity-spread설정을 할 때, spot pod가 없고 on-demand pod만 배포하면 두 번째 배포부터 에러 발생
+* capacity-spread설정을 할 때, spot pod가 없고 on-demand pod만 배포하면 두 번째 karpetner node 생성에서 에러 발생
 * karpenter 버전 0.37.0
 
 # 오류 재현 방법
@@ -14,7 +14,6 @@ kubectl apply -f ./nodepools/teamA
 
 ```sh
 $ kubectl apply -f ./workloads/teamA-typeA
-$ kubectl apply -f ./workloads/teamA-typeB
 $ kubectl get pod
 NAME                                               READY   STATUS    RESTARTS   AGE
 example-17-teama-typea-ondemand-65d4569598-htvvw   1/1     Running   0          70m
